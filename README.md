@@ -3,6 +3,19 @@
 This project contains a Vagrant/VirtualBox setup to build the Nerves Project (http://nerves-project.org/ https://github.com/nerves-project/nerves-sdk), 
 an embedded Erlang environment for the BeagleBone and Raspberry Pi.
 
+## Installation
+
+To install VirtualBox and Vagrant using homebrew (http://brew.sh/) :
+```
+brew tap caskroom/cask
+brew update
+brew install brew-cask
+brew cask install virtualbox
+brew cask install vagrant
+```
+
+## Description
+
 The VagrantFile describes the VM setup (important to increase the default memory size and use the specified version
 of Ubuntu - newer versions don't appear to have the correct libraries available). The `nerves-bootstrap.sh` file is
 run when the vagrant environment is initially started with `vagrant up` or by running `vagrant provision`. It will
