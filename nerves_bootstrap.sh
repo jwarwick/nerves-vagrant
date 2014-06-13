@@ -2,7 +2,7 @@
 
 apt-get update
 apt-get install -y git g++ libssl-dev libncurses5-dev bc
-sudo apt-get install -y libc6:i386 libstdc++6:i386 zlib1g:i386 gcc-multilib
+apt-get install -y libc6:i386 libstdc++6:i386 zlib1g:i386 gcc-multilib
 
 # packages not recommended by nerves-sdk that seem to be required
 apt-get install -y zip unzip make
