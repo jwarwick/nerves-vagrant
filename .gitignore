@@ -1,3 +1,8 @@
 .vagrant/
 *.img
+.rebar/
+_images/
+_rel/
+ebin/
+
 
