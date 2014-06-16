@@ -57,7 +57,7 @@ See the section: _Using command line tools (1)_
 
 What I've done so far (in the `erlang-build` branch):
 * Download rebar: `wget https://github.com/rebar/rebar/wiki/rebar`
-* Create a new app: `rebar create-app appid=zmq_interface`
+* Create a new app: `rebar create-app appid=nerves_sample`
 * Create a simple GenServer
 * Spawn it from the Supervisor
 * Create a simple Makefile
