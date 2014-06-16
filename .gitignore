@@ -3,4 +3,5 @@
 ebin/
 .rebar/
 _rel/
+_images/
 

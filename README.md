@@ -55,7 +55,7 @@ See the section: _Using command line tools (1)_
 
 ## Erlang Build Instructions
 
-What I've done so far:
+What I've done so far (in the `erlang-build` branch):
 * Download rebar: `wget https://github.com/rebar/rebar/wiki/rebar`
 * Create a new app: `rebar create-app appid=zmq_interface`
 * Create a simple GenServer
@@ -64,3 +64,17 @@ What I've done so far:
 * Install relx https://github.com/erlware/relx
 * Created simple `relx.config`
 * Added rule to Makefile
+* Created target specific `relx-vagrant.config` file
+* Created target specific `erlang-vagrant-vm.args` file
+* Updated Makefile to run these rules from Vagrant environment
+
+How to build target sd card image:
+```bash
+  $ vagrant up
+  $ vagrant ssh
+  % cd /vagrant
+  % source /home/vagrant/nerves-sdk/nerves-env.sh
+  % make target
+```
+
+The sd card image will be in `_images/vagrant.img` on the mac.
