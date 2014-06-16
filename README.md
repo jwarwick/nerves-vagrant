@@ -53,3 +53,14 @@ an Erlang console.
 SD card creation instructions from: http://elinux.org/RPi_Easy_SD_Card_Setup#Flashing_the_SD_card_using_Mac_OSX
 See the section: _Using command line tools (1)_
 
+## Erlang Build Instructions
+
+What I've done so far:
+* Download rebar: `wget https://github.com/rebar/rebar/wiki/rebar`
+* Create a new app: `rebar create-app appid=zmq_interface`
+* Create a simple GenServer
+* Spawn it from the Supervisor
+* Create a simple Makefile
+* Install relx https://github.com/erlware/relx
+* Created simple `relx.config`
+* Added rule to Makefile

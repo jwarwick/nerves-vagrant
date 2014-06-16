@@ -2,4 +2,5 @@
 *.img
 ebin/
 .rebar/
+_rel/
 
