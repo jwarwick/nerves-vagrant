@@ -8,7 +8,7 @@ defmodule NervesElixir do
 
     children = [
       # Define workers and child supervisors to be supervised
-      # worker(NervesElixir.Worker, [arg1, arg2, arg3])
+      worker(NervesElixir.Worker, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

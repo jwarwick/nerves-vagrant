@@ -53,3 +53,13 @@ an Erlang console.
 SD card creation instructions from: http://elinux.org/RPi_Easy_SD_Card_Setup#Flashing_the_SD_card_using_Mac_OSX
 See the section: _Using command line tools (1)_
 
+# Elixir Build
+Actions taken to build an Elixir (http://elixir-lang.org/) Nerves project.
+* Create a new mix app: `mix new --sup nerves_elixir `
+* Goto the `nerves_elixir` directory
+* Create a simple elixir GenServer and spawn it from the Application/Supervisor
+* Create a simple Makefile to do build/clean
+* Download relx: https://github.com/erlware/relx
+* Copy relx executable to this directory
+* Create `config/relx.config`. Specify Elixir beam files path and `_build` path  in the `lib_dir` directive.
+* Create release rule in the Makefile, point it to the `relx.config` file
