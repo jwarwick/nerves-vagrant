@@ -1,8 +1,8 @@
 {application, nerves_sample,
  [
-  {description, ""},
+  {description, "Simple test server for the Nerves environment"},
   {vsn, "1"},
-  {registered, []},
+  {registered, [nerves_sample_server]},
   {applications, [
                   kernel,
                   stdlib
