@@ -1,0 +1,12 @@
+{application, nerves_sample,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { nerves_sample_app, []}},
+  {env, []}
+ ]}.
