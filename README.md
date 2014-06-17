@@ -63,3 +63,19 @@ Actions taken to build an Elixir (http://elixir-lang.org/) Nerves project.
 * Copy relx executable to this directory
 * Create `config/relx.config`. Specify Elixir beam files path and `_build` path  in the `lib_dir` directive.
 * Create release rule in the Makefile, point it to the `relx.config` file
+* Create Elixir specific `vm.args` (CLI not working) and `vagrant-relx.config`.
+* Create target rule in the Makefile
+
+To build in the Vagrant environment:
+```bash
+  $ vagrant up
+  $ vagrant ssh
+  % cd /vagrant/nerves_elixir
+  % source /home/vagrant/nerves-sdk/nerves-env.sh
+  % make target
+```
+The sd card image will be at `_images/nerves_elixir.img`.
+
+I was unable to get the Elixir CLI to launch in `vm.args`, either on the target or on the Mac. Suspect it has something
+to do with a change in v0.14. 
+
