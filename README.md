@@ -1,6 +1,6 @@
 # Nerves-Vagrant Setup
 
-This project contains a Vagrant/VirtualBox setup to build the Nerves Project (http://nerves-project.org/ https://github.com/nerves-project/nerves-sdk), 
+This project contains a Vagrant/VirtualBox setup to build the Nerves Project (http://nerves-project.org/ https://github.com/nerves-project/nerves-sdk),
 an embedded Erlang environment for the BeagleBone and Raspberry Pi.
 
 ## Installation
@@ -21,7 +21,9 @@ of Ubuntu - newer versions don't appear to have the correct libraries available)
 run when the vagrant environment is initially started with `vagrant up` or by running `vagrant provision`. It will
 download the Nerves project and build an image for the Raspberry Pi.
 
-The default Raspberry Pi setup makes the HDMI output the console. To make the debug console be the default output, 
+If you are using a Raspberry Pi 2, before running `vagrant up` for the first time, edit file `nerves_bootstrap.sh` and replace `nerves_rpi_defconfig` with `nerves_rpi2_defconfig`.  You can choose other configurations as you wish.  See [nerves-sdk repo](https://github.com/nerves-project/nerves-sdk) for a list of them.
+
+The default Raspberry Pi setup makes the HDMI output the console. To make the debug console be the default output,
 ssh to the image and modify the file `~/nerves-sdk/board/nerves-common/rootfs-additions/etc/erlinit.config` and run `make` again.
 
 For info on connecting to the Raspberry Pi via the USB console cable, see: https://learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-5-using-a-console-cable.pdf
